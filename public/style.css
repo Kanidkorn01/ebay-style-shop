@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">ShopShowcase</div>
+        <a class="nav-button" href="#sell-form">Add item</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Your personal shop</p>
+          <h1>Show items, collect interest, and sell faster.</h1>
+          <p class="subtitle">
+            Add your own product listings and let visitors comment with their username before buying.
+          </p>
+        </div>
+      </section>
+
+      <section id="sell-form" class="panel form-panel">
+        <h2>Add a new item</h2>
+        <form id="itemForm">
+          <div class="grid-two">
+            <div class="field">
+              <label for="title">Item name</label>
+              <input id="title" name="title" type="text" placeholder="Example: Nike shoes" required />
+            </div>
+            <div class="field">
+              <label for="price">Price</label>
+              <input id="price" name="price" type="number" min="0" step="0.01" placeholder="500" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" placeholder="Tell people what makes this item special" required></textarea>
+          </div>
+
+          <div class="grid-two">
+            <div class="field">
+              <label for="image">Image URL</label>
+              <input id="image" name="image" type="url" placeholder="https://example.com/image.jpg" />
+            </div>
+            <div class="field">
+              <label for="lineId">Your Line ID</label>
+              <input id="lineId" name="lineId" type="text" placeholder="seller123" required />
+            </div>
+          </div>
+
+          <button type="submit" class="primary-btn">Add item</button>
+        </form>
+      </section>
+
+      <section class="items-header">
+        <h2>Available items</h2>
+      </section>
+
+      <section id="itemsContainer" class="items-grid" aria-live="polite"></section>
+    </main>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
